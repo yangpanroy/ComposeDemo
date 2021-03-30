@@ -32,6 +32,7 @@ class MainActivity : AppCompatActivity() {
     fun Page(routes: List<Route>) {
         LazyColumn {
             items(routes.size) {
+                Spacer(Modifier.size(8.dp))
                 Box(
                     modifier = Modifier
                         .height(50.dp)
@@ -40,10 +41,9 @@ class MainActivity : AppCompatActivity() {
                         .background(Color(0xFFEBEBEB)),
                     contentAlignment = Alignment.Center
                 ) {
-                    Spacer(Modifier.size(8.dp))
                     Text(routes[it].label)
-                    Spacer(Modifier.size(8.dp))
                 }
+                Spacer(Modifier.size(8.dp))
             }
         }
     }
